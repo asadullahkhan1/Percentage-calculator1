@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+          .class{
+                text-align: center;
+                height: 100px;                
+                margin: 50px;
+                padding: 50px;
+                color: rgb(0, 4, 255);
+          }
+       .c4{
+          text-align: center;
+          color: blue;
+       }
+
+
+    </style>
+</head>
+<body>
+    <form class="class" onsubmit="calculator(); return false">
+        <div class="c1">
+            <label for="total marks">Total marks</label>
+            <input type="number" class="c1" id="tm" placeholder="Enter your total marks" >
+        </div>
+        <div class="c2">
+            <label for="obtained marks">Obtained marks</label>
+            <input type="number" class="c2" id="om" placeholder="Enter your obtained marks">
+        </div>
+        <div class="c3">
+            <button type="submit">Calculate</button>
+        </div>
+
+    </form>
+    <h1 id="result" class="c4" >welcome</h1>
+    <script>
+           function calculator() {
+        let totalmarks1= document.querySelector("#tm").value;
+        let obtainedmarks1= document.querySelector("#om").value;
+          result=obtainedmarks1 * 100 /totalmarks1;
+          document.querySelector("#result").innerHTML= "you have got" + result + "%"
+
+           }
+
+
+    </script>
+</body>
+</html>
